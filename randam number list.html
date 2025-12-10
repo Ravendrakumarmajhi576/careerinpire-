@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+       
+        .conatiner {
+            width: 400px;
+            height: 200px;
+            border: 2px solid rgb(201, 188, 188);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-left: 500px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+
+            margin-left: 610px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav class="navbar bg-success" data-bs-theme="dark">
+
+
+        <div class="text-center w-100 ">
+            <h1 style="color: white;">Welcome Creer Inspire </h1>
+
+    </nav>
+
+    <br><br>
+    <div class="conatiner">
+
+    </div>
+    <br><br><br>
+
+    <button class="btn btn-danger" id="btn">Get Random Quote</button>
+
+    <script>
+        const quotes = [
+            "The only way to do great work is to love what you do.",
+            "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+            "Believe you can and you're halfway there.",
+            "Do not watch the clock; do what it does. Keep going.",
+            "Your time is limited, so don’t waste it living someone else’s life.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "It always seems impossible until it’s done.",
+            "Hardships often prepare ordinary people for an extraordinary destiny.",
+            "Dream big and dare to fail.",
+            "Act as if what you do makes a difference. It does."
+        ];
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
+            const randomQuote = Math.floor(Math.random() * quotes.length);
+            document.querySelector(".conatiner").innerHTML = quotes[randomQuote];
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
